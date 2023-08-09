@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CadastroComponent } from './cadastro.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('CadastroComponent', () => {
   let component: CadastroComponent;
@@ -8,7 +10,8 @@ describe('CadastroComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CadastroComponent]
+      declarations: [CadastroComponent],
+      imports: [HttpClientModule, ReactiveFormsModule]
     });
     fixture = TestBed.createComponent(CadastroComponent);
     component = fixture.componentInstance;

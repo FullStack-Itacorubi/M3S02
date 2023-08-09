@@ -25,7 +25,7 @@ export class AuthService {
 
   obterNomePedagogoLogado() {
     const pedagogoString = localStorage.getItem("usuario");
-    if (pedagogoString === null) return;
+    if (pedagogoString === null) return "";
     const pedagogoLogado = <IPedagogo>JSON.parse(pedagogoString);
     console.log(pedagogoLogado);
     const nomeCompleto = pedagogoLogado.nome; 

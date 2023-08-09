@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AutenticacaoLayoutComponent } from './autenticacao-layout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 describe('AutenticacaoLayoutComponent', () => {
   let component: AutenticacaoLayoutComponent;
@@ -8,7 +10,8 @@ describe('AutenticacaoLayoutComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AutenticacaoLayoutComponent]
+      declarations: [AutenticacaoLayoutComponent],
+      imports: [HttpClientModule, AppRoutingModule]
     });
     fixture = TestBed.createComponent(AutenticacaoLayoutComponent);
     component = fixture.componentInstance;
