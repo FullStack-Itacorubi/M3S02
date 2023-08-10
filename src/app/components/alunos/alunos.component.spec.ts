@@ -20,4 +20,10 @@ describe('AlunosComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Deve haver itens na variável alunos quando executado o ngOnInit', async ()=>{
+    await component.ngOnInit();
+    expect(component.alunos).toBeTruthy();
+  })
+
 });

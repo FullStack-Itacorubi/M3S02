@@ -15,11 +15,11 @@ export class AlunosComponent implements OnInit {
 
   async ngOnInit() {
     this.alunos = await this.alunoService.obterAlunos();
-    console.log(this.alunos);
   }
 
   onInputChange() {
     const input = document.getElementById("filtroAluno") as HTMLInputElement;
+    
     if (this.alunos === undefined) return;
     this.alunos = this.alunoService.filtrarAlunos(input.value);
   }

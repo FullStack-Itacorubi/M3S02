@@ -21,4 +21,33 @@ describe('AlunosCadastroComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('onSubmit deve cadastrar mais um aluno quando apertar no botão Cadastrar aluno', async ()=>{
+    component.alunoForm.patchValue({
+      "nome": "Rayane",
+      "telefone": "81986603177",
+      "dataNascimento": "2000-12-12",
+      "cpf": "63497534021",
+      "nota": 1,
+      "id": 20
+    })
+    let newAluno = await component.onSubmit();
+    expect(newAluno).toBeTruthy();
+  })
+
+  it('Deve validar a data se o formato é XX/XX/XXX quando for criar um aluno', ()=>{
+    component.alunoForm.patchValue({
+      "nome": "Rayane",
+      "telefone": "81986603177",
+      "data": "2000-12-12",
+      "cpf": "63497534021",
+      "nota": 1,
+      "id": 20
+    });
+
+    let dataFormatada = component.formatarData(component.alunoForm.get('data')?.value);
+
+    expect(dataFormatada).toMatch(/^\d{2}\/\d{2}\/\d{4}$/);
+  })
+
 });
