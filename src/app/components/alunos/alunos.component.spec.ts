@@ -26,4 +26,13 @@ describe('AlunosComponent', () => {
     expect(component.alunos).toBeTruthy();
   })
 
+  it('Deve validar se existe itens no array quando pesquisar no input', async ()=>{
+    let input: HTMLInputElement  = document.querySelector('#filtroAluno');
+    input.value = 'a';
+
+    await component.ngOnInit();
+    component.onInputChange();
+
+    expect(component.alunos.length).toBeGreaterThan(0);
+  })
 });

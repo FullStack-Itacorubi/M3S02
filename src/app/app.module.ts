@@ -18,6 +18,7 @@ import { AcompanhamentosComponent } from './components/acompanhamentos/acompanha
 import { InicioComponent } from './components/inicio/inicio.component';
 import { AlunosCadastroComponent } from './components/alunos-cadastro/alunos-cadastro.component';
 import { AcompanhamentosCadastroComponent } from './components/acompanhamentos-cadastro/acompanhamentos-cadastro.component';
+import { ExerciciosTrelloComponent } from './exercicios-trello/exercicios-trello.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AcompanhamentosCadastroComponent } from './components/acompanhamentos-c
     AcompanhamentosComponent,
     InicioComponent,
     AlunosCadastroComponent,
-    AcompanhamentosCadastroComponent
+    AcompanhamentosCadastroComponent,
+    ExerciciosTrelloComponent
   ],
   imports: [
     BrowserModule,
