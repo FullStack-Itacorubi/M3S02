@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:18 as construcao
 
 WORKDIR /app
 
@@ -6,6 +6,10 @@ COPY . .
 
 RUN npm install
 
-EXPOSE 4000
+RUN npm run build
 
-CMD [ "npm", "run", "start" ]
+FROM nginx:alpine as final
+
+COPY --from=construcao /app/dist/labschool-manager /usr/share/nginx/html
+
+EXPOSE 80
