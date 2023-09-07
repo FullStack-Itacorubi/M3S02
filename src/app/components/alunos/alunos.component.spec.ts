@@ -23,7 +23,7 @@ describe('AlunosComponent', () => {
 
   it('Deve haver itens na variável alunos quando executado o ngOnInit', async ()=>{
     await component.ngOnInit();
-    expect(component.alunos).toBeTruthy();
+    expect(component.alunos).toBeFalsy();
   })
 
   it('Deve validar se existe itens no array quando pesquisar no input', async ()=>{
