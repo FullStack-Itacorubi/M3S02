@@ -16,7 +16,7 @@ fdescribe('ExerciciosTrelloComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeFalsy();
   });
 
   it('calculaMedia deve retornar a média de 3 números quando chamado', ()=>{
