@@ -26,6 +26,7 @@ jobs:
   
   cd:
     name: CD - Docker Hub
+    needs: contrucao
     runs-on: ubuntu-latest
     steps: 
     - name: Set up QEMU
